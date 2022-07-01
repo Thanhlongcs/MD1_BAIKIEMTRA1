@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>nhap vao nam sinh</p>
+<input type="text" id="nhapnam">
+<button onclick="tinhTuoi()">clickhere</button>
+<h1 id="ketq"></h1>
+<h1 id="ketq2"></h1>
+</body>
+<script>
+    function tinhTuoi() {
+        let namsinh=+ document.getElementById('nhapnam').value
+        let can=namsinh%10
+        switch (can){
+            case 0:can= 'canh';
+                document.getElementById('ketq').innerHTML=can;
+                break;
+            case 1: can='tân';
+                document.getElementById('ketq').innerHTML=can;
+                break;
+            case 2:can='nhâm';
+                document.getElementById('ketq').innerHTML=can;
+                break;
+            case 3:can='quý';
+                document.getElementById('ketq').innerHTML=can;
+                break;
+            case 4:can='giáp';
+                document.getElementById('ketq').innerHTML=can;
+                break;
+            case 5:can='ất';
+                document.getElementById('ketq').innerHTML=can;
+                break;
+            case 6:can='bính';
+                document.getElementById('ketq').innerHTML=can;
+                break;
+            case 7:can='đinh';
+                document.getElementById('ketq').innerHTML=can;
+                break;
+            case 8:can='mậu';
+                document.getElementById('ketq').innerHTML=can;
+                break;
+            default:can='kỷ';
+                document.getElementById('ketq').innerHTML=can;
+                break;
+
+        }
+        let chi=namsinh%12
+        switch (chi) {
+            case 0:chi='thân'
+                document.getElementById('ketq2').innerHTML=chi;
+                break;
+            case 1:chi='dậu'
+                document.getElementById('ketq2').innerHTML=chi;
+                break;
+            case 2:chi='tuất'
+                document.getElementById('ketq2').innerHTML=chi;
+                break;
+            case 3:chi='hợi'
+                document.getElementById('ketq2').innerHTML=chi;
+                break;
+            case 4:chi='tý'
+                document.getElementById('ketq2').innerHTML=chi;
+                break;
+            case 5:chi='sửu'
+                document.getElementById('ketq2').innerHTML=chi;
+                break;
+            case 6:chi='dần'
+                document.getElementById('ketq2').innerHTML=chi;
+                break;
+            case 7:chi='mão'
+                document.getElementById('ketq2').innerHTML=chi;
+                break;
+            case 8:chi='thìn'
+                document.getElementById('ketq2').innerHTML=chi;
+                break;
+            case 9:chi='tỵ'
+                document.getElementById('ketq2').innerHTML=chi;
+                break;
+            case 10:chi='ngọ'
+                document.getElementById('ketq2').innerHTML=chi;
+                break;
+            default:chi='mùi'
+                document.getElementById('ketq2').innerHTML=chi;
+                break;
+        }
+    }
+</script>
+</html>

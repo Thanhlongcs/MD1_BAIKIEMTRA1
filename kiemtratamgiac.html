@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>nhap vao canh 1</p>
+<input type="text" id="canh1">
+<p>nhap vao canh 2</p>
+<input type="text" id="canh2">
+<p>nhap vao canh 3</p>
+<input type="text" id="canh3">
+<button onclick="tamGiac()">clickhere</button>
+<h1 id="ketqua"></h1>
+<script>
+    function tamGiac() {
+        let a = +document.getElementById('canh1').value
+        let b = +document.getElementById('canh2').value
+        let c = +document.getElementById('canh3').value
+        if(c*c==a*a+b*b){
+            document.getElementById('ketqua').innerHTML='day la tam giac vuong'
+        }else{
+            document.getElementById('ketqua').innerHTML='day khong phai tam giac vuong'
+        }
+    }
+</script>
+</body>
+</html>

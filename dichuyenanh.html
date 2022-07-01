@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="dung" style="position: relative;top: 0px;left: 0px;" src="image/dung.jpg" height="200" width="200">
+<img id="diep" style="position: relative;top: 500px;left: 500px;" src="image/diep.jpg" height="200" width="200">
+<button onclick="moveright()">right</button>
+<button onclick="moveleft()">left</button>
+<button onclick="moveup()">up</button>
+<button onclick="movedown()">down</button>
+</body>
+<script>
+    let image= document.getElementById('dung');
+    function moveright() {
+        image.style.left=parseInt( image.style.left)+10+'px'
+    }
+    function moveleft() {
+        image.style.left=parseInt( image.style.left)-10+'px'
+    }
+    function moveup() {
+        image.style.top=parseInt( image.style.top)-10+'px'
+    }
+    function movedown() {
+        image.style.top=parseInt( image.style.top)+10+'px'
+    }
+    function moveWithkeyboard(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                moveleft();
+                break;
+            case 39:
+                moveright();
+                break;
+            case 38:
+                moveup();
+                break;
+            case 40:
+                movedown();
+                break;
+
+        }
+    }
+    window.addEventListener('keydown',moveWithkeyboard);
+</script>
+</html>

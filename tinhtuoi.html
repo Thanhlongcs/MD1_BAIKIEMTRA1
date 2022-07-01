@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>nhap vao tuoi cua em</p>
+<input type="text" id="nhaptuoi">
+<button onclick="tinhTuoi()">tinhtuoi</button>
+<h1 id="tuoianh"></h1>
+<h1 id="tuoibo"></h1>
+<script>
+    function tinhTuoi() {
+        let tuoiem = +document.getElementById('nhaptuoi').value
+        document.getElementById('tuoianh').innerHTML='tuoi cua anh la'+' '+ (tuoiem+3);
+        document.getElementById('tuoibo').innerHTML='tuoi cua bo la'+' '+ (tuoiem+3)*6;
+    }
+</script>
+</body>
+</html>
